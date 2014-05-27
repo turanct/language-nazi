@@ -48,7 +48,11 @@ abstract class LanguageNazi
      */
     final public function nextNazi(LanguageNazi $next)
     {
-        $this->next = $next;
+        if ($this->next === null) {
+            $this->next = $next;
+        } else {
+            $this->next->nextNazi($next);
+        }
 
         return $next;
     }

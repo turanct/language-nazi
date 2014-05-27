@@ -43,8 +43,8 @@ class Chain
 	public function __construct()
 	{
 		$this->chain = new FirstCharacterOfSentenceShouldBeUpperCase();
-		$this->chain->nextNazi(new Underline())
-			->nextNazi(new FormatPhoneNumbers());
+		$this->chain->nextNazi(new Underline());
+		$this->chain->nextNazi(new FormatPhoneNumbers());
 	}
 
 	public function process($text)
